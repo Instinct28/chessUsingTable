@@ -1,150 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Board Using Table</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .main{
-            height: 400px;
-            width: 400px;
-            margin: auto;
-        }
-        .white{
-            margin: 0;
-            padding: 0;
-            height: 50px;
-            width: 50px;
-            background-color: white;
-            border: 1px black solid;
-            border-collapse: collapse;
-        }
-        .black{
-            margin: 0;
-            padding: 0;
-            height: 50px;
-            width: 50px;
-            background-color: black;
-            border: 1px black solid;
-            border-collapse: collapse;
-        }
-        .tab{
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <title>Chessboard Using Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+   .W,.b {
+        height: 50px;
+        width: 50px;
+        border: 1px black solid;
+        text-align: center;
+    }
+    .W{
+        background-color: white;
+    }
+    i{
+        font-size: 20px;
+    }
+    .b {
+        background-color: black;
+    }
+    table {
+        height: 400px;
+        width: 400px;
+        border-collapse: collapse;
+        margin: auto;
+    }
+    #one {
+        text-align: center;
+        padding: 10px;
+
+
+    }
+</style>
+</head>
+
+
+
 <body>
-    <div class="main">
-        <table class="tab">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>a</th>
-                    <th>b</th>
-                    <th>c</th>
-                    <th>d</th>
-                    <th>e</th>
-                    <th>f</th>
-                    <th>g</th>
-                    <th>h</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>1</th>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                </tr>
-                <tr>
-                    <th>6</th>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                </tr>
-                <tr>
-                    <th>7</th>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                </tr>
-                <tr>
-                    <th>8</th>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                    <td class="black"></td>
-                    <td class="white"></td>
-                </tr>
-            </tbody>
+    
+        <table>
+            <tr>
+                <th></th>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+                <th>d</th>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+                <th>h</th>
+            </tr>
+
+            <tr>
+                <th id="one">8</th>
+                <td class="W"><i class="fa-solid fa-chess-rook" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-knight" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-bishop" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-king" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-queen" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-bishop" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-knight" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-rook" style="color: #74C0FC;"></i></i></td>
+            </tr>
+
+            <tr>
+                <th>7</th>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #74C0FC;"></i></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+                <td class="b"></td>
+                <td class="W"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-pawn" style="color: #63E6BE;"></i></td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td class="b"><i class="fa-solid fa-chess-rook" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-knight" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-bishop" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-king" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-queen" style="color:  #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-bishop" style="color: #63E6BE;"></i></td>
+                <td class="b"><i class="fa-solid fa-chess-knight" style="color: #63E6BE;"></i></td>
+                <td class="W"><i class="fa-solid fa-chess-rook" style="color: #63E6BE;"></i></td>
+            </tr>
+
+
+
+
+
+
         </table>
-    </div>
 </body>
-</html>
+
+</html>`
